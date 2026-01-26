@@ -1,0 +1,80 @@
+/* Patrice Moracchini - Module 3.3 CSS File */
+
+/* Set the body font to Oxanium, with Arial and sans-serif as fallbacks */
+body {
+  font-family: "Oxanium", Arial, sans-serif;
+}
+
+/* h1 title centered on the page */
+h1 {
+  text-align: center;
+}
+
+/* weight of the h3 tags to 500 */
+h3 {
+  font-weight: 500;
+  margin: 0;
+}
+
+/* weight of the lists to 300 */
+ol, ul {
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Style the left and right divs to be side by side */
+#left-div,
+#right-div {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* left div  with a margin-right of 4% */
+#left-div {
+  margin-right: 4%;
+}
+
+/* Apply a 1px solid red border with a 15px border-radius to the ordered list and its title */
+#left-div {
+  border: 1px solid red;
+  border-radius: 15px;
+}
+
+/* Ordered list with a padding of 10px and numbers to inside */
+#left-div ol {
+  padding: 10px;
+  list-style-position: inside;
+}
+
+/* Apply a 1px dashed red border with a 15px border-radius to the unordered list and its title */
+#right-div {
+  border: 1px dashed red;
+  border-radius: 15px;
+}
+
+/* Unordered list with a padding of 10px, bullets upper-roman, and numbers to inside */
+#right-div ul {
+  padding: 10px;
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+/* Style the bottom div */
+#bottom-div {
+  width: 100%;
+  margin-top: 60%;
+  margin-bottom: 20px;
+}
+
+/* Float the link to the right inside the bottom div */
+#bottom-div a {
+  float: right;
+}
+
+/* Underline the link on hover */
+a:hover {
+  text-decoration: underline;
+}
