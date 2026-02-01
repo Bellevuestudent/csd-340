@@ -1,0 +1,56 @@
+/* Patrice Moracchini 
+   CSS file for Moracchini_Mod4_2.html */
+
+
+body {
+  font-family:"Oxanium", Arial, sans-serif; /* using Google font */
+}
+
+h1 {
+  text-align: center;                       /* centering h1 */
+  color: rgba(200, 80, 0, 0.95);          /* color for h1 */
+}
+
+h2 {                  /* not required in the assignment but centers h2 and match colors with h3 */
+  text-align: center;
+  color: rgba(200, 80, 0, 0.9); 
+}
+
+#image-gallery {                      /* styling the grid with 3 side by side */
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gallery-item {                     /* styling each gallery item div */
+  border: 1px solid rgba(200, 80, 0, 0.6);
+  padding: 20px;
+  text-align: center;
+}
+
+h3 {                             /* styling h3, center and color */   
+  text-align: center;
+  color: rgba(200, 80, 0, 0.9); 
+}
+
+figure {                       /* centering figure */
+  text-align: center;
+  margin: 0;
+}
+
+img {                         /* setting image size */
+  width: 150px;
+  height: auto;
+}
+
+figcaption {               /* styling figcaption */
+  font-style: italic;
+  font-size: 0.75em;
+  color: rgba(200, 80, 0, 0.85); 
+  margin-top: 10px;
+}
+
+.back-link {                 /* styling back to landing page link */
+  margin-top: 80px;
+  text-align: right;
+}
