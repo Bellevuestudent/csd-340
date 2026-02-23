@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Name: Patrice Moracchini
+    Assignment: Module 8.2
+    Build a Webpage Exercise, Part 6
+-->
+        <meta charset="UTF-8">
+        <title>CSD 340 Web Development with HTML and CSS</title> 
+        <!-- adding Google font-->
+        <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400&display=swap" rel="stylesheet">
+        <!-- linking css file -->
+        <link rel="stylesheet" href="Moracchini_Mod8_2.css"> 
+</head>
+
+<body>
+    <header>
+        <h1>Assignment 8.2: Build a Web Page - Part 6</h1>
+    </header>
+        <!-- adding navigation bar -->
+    <div id="navbar">
+        <a href="#">Home</a>    <!-- adding link to home page -->
+        <a href="#">About</a>   <!-- adding link to about page -->
+        <a href="#">Contact</a>    <!-- adding link to contacts page -->
+    </div>
+
+    <div id="container">   <!-- adding container div -->
+            <!-- Card 1: Movies -->
+    <div class="card">
+      <div class="card-title">Top 5 Favorite Movies</div>
+
+      <div class="card-content">
+        <table id="movies">
+          <thead>
+            <tr>
+              <th>Movie Name</th>
+              <th>Two Characters</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Close Encounters of the Third Kind</td>
+              <td>
+                <ul>
+                  <li>Roy Neary</li>
+                  <li>Claude Lacombe</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Dark Waters</td>
+              <td>
+                <ul>
+                  <li>Robert Bilott</li>
+                  <li>Sarah Bilott</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Dolores Claiborne</td>
+              <td>
+                <ul>
+                  <li>Dolores Claiborne</li>
+                  <li>Selena St. George</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Palais Royal!</td>
+              <td>
+                <ul>
+                  <li>Princesse Armelle</li>
+                  <li>Prince Arnaud</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Le Goût Des Autres (The Taste of the Others)</td>
+              <td>
+                <ul>
+                  <li>Manie</li>
+                  <li>Jean-Jacques Castella</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <!-- Card 2: Foods (copy from last assignment) -->
+        <div class="card">  
+            <div class="card-title">Top 5 Favorite Foods</div>
+            <div class="card-content">
+                <ol>    <!-- adding ordered list for website with top favorite food recipes, each link opens in a new tab and 
+                    added security settings. -->
+                    <li> <a href="https://www.seriouseats.com/sweetbreads-saute-recipe" target="_blank" rel="noopener noreferrer">Sweetbreads Sauté</a></li>
+                    <li> <a href="https://www.grandmaducky.recipes/2023/12/foie-gras-on-toasted-bread-an-elegant-appetiser-for-new-years-eve/" target="_blank" rel="noopener noreferrer">Foie Gras Toasted On Bread</a></li>
+                    <li> <a href="https://grantourismotravels.com/penne-bolognese-recipe/" target="_blank" rel="noopener noreferrer">Penne Bolognese</a></li>
+                    <li> <a href="https://www.madaboutmacarons.com/tarte-tatin-recipe/" target="_blank" rel="noopener noreferrer">Tarte Tatin</a></li>
+                    <li> <a href="https://www.seriouseats.com/paris-brest-pate-a-choux-with-praline-creme-mousseline" target="_blank" rel="noopener noreferrer">Paris–Brest (Pâte à Choux With Praline Crème Mousseline)</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+  <footer>
+    <span id="footer-left">Copyright 2026 - Moracchini</span>
+    <a id="footer-right" href="../index.html">back to Landing Page</a>
+  </footer>
+</body>
+</html>
