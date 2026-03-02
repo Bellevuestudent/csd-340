@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!--
+      Name: Patrice Moracchini
+      Assignment 9.3
+      JavaScript - Part 1
+      Reference: Tersigni, D. (2004). Clue – Script. The Almighty Guru. https://www.thealmightyguru.com/Reviews/Clue/Clue-Script.html
+    -->
+    <!-- adding Google font and styling body  to keep this assignment consistent with the other pages -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Oxanium', Arial, sans-serif;
+      }
+    </style>
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+  </head>
+
+  <body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <!-- text with blanks to be filled in by JavaScript -->
+    <p><strong>Dialogue from the Movie "Clue"(1985)- Blackmail scene.</strong></p>
+    <p>
+      WADSWORTH:
+      Ladies and gentlemen, you all have one thing in common. You're all being
+      blackmailed. For some considerable time, all of you have been paying what
+      you can afford and, in some cases, more than you can afford to someone who
+
+      <span id="blank1">__________</span>   
+      <!-- first blank to be filled in by JavaScript -->
+      to expose you. And none of you know who's blackmailing you, do you?
+    </p>
+
+    <p>
+      PEACOCK:
+      Oh, please! I've never heard anything so ridiculous. I mean, nobody could
+
+      <span id="blank2">__________</span>
+      <!-- second blank to be filled in by JavaScript -->
+      me. My life is an open book--I've
+
+      <span id="blank3">__________</span>
+      <!-- third blank to be filled in by JavaScript -->
+      done anything wrong.
+    </p>
+    <p>
+      WADSWORTH:
+      Anybody else wish to deny it?
+
+      Very well. As everyone here is in the same boat, there's no harm in my
+      revealing some details. And my instructions are to do so. Thank you,
+      Yvette.
+    </p>
+
+    <p>
+      WHITE:
+      Don't you think you might spare us this humiliation?
+    </p>
+
+    <p>
+      WADSWORTH:
+      I'm sorry. Professor Plum, you were once a professor of psychiatry,
+      specializing in helping paranoid and homicidal lunatics suffering from
+      delusions of grandeur.
+    </p>
+    <p>
+      PLUM:
+      Yes, but now I work for the
+
+      <span id="blank4">__________</span>
+      <!-- fourth blank to be filled in by JavaScript -->
+      Nations.
+    </p>
+    <p>
+      WADSWORTH:
+      So your work has not changed. But you don't practice medicine at the U.N.
+      His license to practice has been lifted, correct?
+    </p>
+    <p>
+      © Copyright 2003-2004: Dean Tersigni. All rights reserved.
+    </p>
+    <p><strong>If you want to know what happens, watch this amazing movie!!!</strong></p>
+
+    <!-- Buttons: one button per span -->
+    <button type="button" onclick="fillWord1()">threatens</button>
+    <button type="button" onclick="fillWord2()">blackmail</button>
+    <button type="button" onclick="fillWord3()">never</button>
+    <button type="button" onclick="fillWord4()">United</button>
+
+    <!-- JavaScript code to fill in the blanks -->
+    <script>
+      // The W3C validator emitted a warning about type="text/javascript" so I removed it.
+      // 4 variables to hold the words for the blanks
+      var word1 = "threatens";
+      var word2 = "blackmail";
+      var word3 = "never";
+      var word4 = "United";
+
+      // 4 functions (one per button). Each one finds a span by its id and replaces the underscores with a word.
+      function fillWord1() {
+        document.getElementById("blank1").textContent = word1;
+      }
+      // document refers to the web page in the browser.
+      function fillWord2() {
+        document.getElementById("blank2").textContent = word2;
+      }
+      // getElementById() finds the HTML tag that has the matching id value.
+      function fillWord3() {
+        document.getElementById("blank3").textContent = word3;
+      }
+      // textContent changes the words shown inside that tag (plain text only).
+      function fillWord4() {
+        document.getElementById("blank4").textContent = word4;
+      }
+    </script>
+    <!-- End of JS code-->
+  </body>
+</html>
