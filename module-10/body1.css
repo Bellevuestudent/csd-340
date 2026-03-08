@@ -1,0 +1,40 @@
+/*This CSS file styles the body of the HTML document Moracchini_Mod10_3, 
+I added a background color, my usual google font to keep the assignments font consistent,
+ matching colors to the text and added borders to the images, i also added a hover effect 2D transform scale to the picture */
+
+body {
+  background-color: #c996a5;
+  background-image: linear-gradient(to bottom, #d8aebb, #c996a5, #b57c8f);
+  color: #5c1f2d;
+  font-family: 'Oxanium', Arial, sans-serif;
+  text-align: center;
+  min-height: 100vh;   /* Ensure the body takes at least the full viewport height */
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #6e2233;
+  margin-bottom: 25px;
+}
+
+div {
+  margin: 15px 0;
+}
+
+div {           
+  color: #5c1f2d;
+}
+img {
+  border: 2px solid #6e2233;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+p {
+  font-size: 16px;
+}

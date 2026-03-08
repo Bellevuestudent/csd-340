@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      Name: Patrice Moracchini
+      Assignment 10.3
+      JavaScript - Part 2
+      The program will display two images. When the user clicks on an image, it will change to a different image. 
+      When the user clicks on the image again, it will change back to the original image. I chose two pictures from batches of photos I took
+      to build HDR images.
+     -->
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <title>
+      CSD 340 Web Development with HTML and CSS
+    </title>
+    <script>
+      // JavaScript function to change the clicked image, and change it back when clicked again.
+      // the if/else statement checks if the clicked image's source is the original image file. If it is,
+      // it changes the source to the new image file. If it's not, it changes the source back to the original image file.
+      function switchImage(clickedImage, newImageFile, originalImageFile) {
+        if (clickedImage.src.indexOf(originalImageFile) !== -1) {       
+          clickedImage.src = newImageFile;                              
+        } else {
+          clickedImage.src = originalImageFile;
+        }
+      }
+    </script>
+    
+    <link rel='stylesheet' type='text/css' href='body1.css' />
+    <!-- as the example contained a link to a css file but no file, I created mine to play a bit with the styling -->
+  </head>
+
+  <body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <br />
+    <div>
+      <img border="0" src="Bay_02.jpg" alt="Bay thumbnail" width="450" height="300" onclick="switchImage(this, 'Bay_01.jpg', 'Bay_02.jpg');" />
+    </div>
+    <div>
+      Click the image to change.
+      <br />
+    </div>
+    <div>
+      <img border="0" src="Sunset_02.jpg" alt="Sunset thumbnail" width="450" height="300" onclick="switchImage(this, 'Sunset_01.jpg', 'Sunset_02.jpg');" />
+    </div>
+    <div>
+      Click the image to change.
+      <br />
+    </div>
+    <br /><br /><br />
+    <footer>
+      <p><a href="../index.html">Back to Landing Page</a></p>
+    </footer>
+  </body>
+
+</html>
