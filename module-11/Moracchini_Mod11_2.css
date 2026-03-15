@@ -1,0 +1,148 @@
+/* 
+Moracchini_Mod11_2.css
+Styles for Moracchini_Mod11_2.html
+*/
+
+ /* Page Background and Default Text */
+body {
+  margin: 0;
+  font-family: "Oxanium", Arial, sans-serif;
+  background: linear-gradient(180deg, #f6eef1 0%, #eee1e7 100%);
+  color: #41202c;
+}
+
+/* Main Layout */
+
+.page-wrapper {
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Main Content Card */
+
+.card {
+  max-width: 850px;
+  margin: 0 auto;
+  background-color: #fff9fb;
+  border: 2px solid #d7bcc6;
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: 0 8px 20px rgba(84, 30, 50, 0.12);
+}
+
+/* Headings and Text */
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #6b1f3a;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #6b1f3a;
+}
+
+.instructions {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Form Elements */
+
+.input-section {
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #5b2236;
+}
+
+#taskInput {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: "Oxanium", Arial, sans-serif;
+  font-size: 1rem;
+  color: #41202c;
+  background-color: #ffffff;
+  border: 2px solid #c8a5b3;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+#taskInput:focus {
+  outline: none;
+  border-color: #8a274b;
+  box-shadow: 0 0 0 3px rgba(138, 39, 75, 0.14);
+}
+
+/* Buttons */
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: "Oxanium", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 20px;
+  color: #ffffff;
+  background-color: #8a274b;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #6b1f3a;
+  transform: translateY(-1px);
+}
+
+/* List Display */
+
+.list-section {
+  padding: 22px;
+  background-color: #f8edf2;
+  border: 2px solid #dbc0cb;
+  border-radius: 14px;
+}
+
+/* Delete Selection */
+.delete-section {
+  margin-top: 30px;
+}
+
+.display-area {
+  min-height: 80px;
+}
+
+.display-area ol {
+  margin: 0;
+  padding-left: 28px;
+}
+
+.display-area li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.empty-message {
+  margin: 0;
+  color: #7b5866;
+}

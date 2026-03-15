@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Document Setup -->
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Moracchini_Mod11_2.css">
+</head>
+<body>
+  <!--
+    Patrice Moracchini
+    Assignment 11.2: JavaScript - Part 3
+
+    Program Description:
+    This program creates a to-do list. The user can add items,
+    delete the last item entered, select a specific item to delete,
+    sort the list alphabetically, and view the updated contents of the
+    array on the page.
+  -->
+  <!-- Page Content -->
+  <div class="page-wrapper">
+    <main class="card">
+      <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+      <p class="instructions">
+        Enter a task in the text box and click Add to place it into the list. Use Delete Last Entry to remove the most recent item. Use Sort to arrange the list in alphabetical order.
+      </p>
+
+      <div class="input-section">
+        <label for="taskInput">To Do Item:</label>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+      </div>
+
+      <div class="button-row">
+        <button type="button" onclick="addItem()">Add</button>
+        <button type="button" onclick="deleteLastEntry()">Delete Last Entry</button>
+        <button type="button" onclick="sortItems()">Sort</button>
+      </div>
+
+      <section class="list-section">
+        <h2>Things To Do</h2>
+        <div id="displayArea" class="display-area"></div>
+      </section>
+
+      <div class="delete-section">
+        <label for="deleteSelect">Select Item to Delete:</label>
+        <select id="deleteSelect"></select>
+        <button type="button" onclick="deleteSelectedItem()">Delete Selected Item</button>
+      </div>
+    </main>
+  </div>
+<!-- JavaScript -->
+  <script>
+    // Data
+    let toDoList = [];
+
+    // Add Item
+    function addItem() {            
+      const input = document.getElementById("taskInput");
+      const task = input.value.trim();
+
+      if (task === "") {            // Check for empty input
+        alert("Please enter a task.");
+        return;
+      }
+      // Add task to the list and update display
+      toDoList.push(task);
+      alert("Item: " + task + " was added.");
+      input.value = "";
+      displayItems();
+    }
+
+    // Delete Last Item
+    function deleteLastEntry() {
+      if (toDoList.length === 0) {          // Check if the list is empty
+        alert("There are no items to delete.");
+        return;
+      }
+
+      const deletedItem = toDoList.pop();   // Remove the last item and store it for alert
+      alert("Deleted item: " + deletedItem);
+      displayItems();
+    }
+
+    // Delete Selected Item by User Choice
+    function deleteSelectedItem() {
+      if (toDoList.length === 0) {             // Check if the list is empty
+        alert("There are no items to delete.");
+        return;
+      }
+
+      const deleteSelect = document.getElementById("deleteSelect");         // Get the select element
+      const selectedIndex = deleteSelect.value;
+
+      if (selectedIndex === "") {           // Check if an item is selected
+        alert("Please select an item to delete.");
+        return;
+      }
+
+      const deletedItem = toDoList.splice(selectedIndex, 1)[0];     // Remove the selected item and store it for alert
+      alert("Deleted selected item: " + deletedItem);
+      displayItems();
+    }
+
+    // Sort Items by Alphabetical Order
+    function sortItems() {
+      if (toDoList.length === 0) {                  //  Check if the list is empty
+        alert("There are no items to sort.");
+        return;
+      }
+
+      toDoList.sort();                             
+      alert("The list has been sorted.");
+      displayItems();
+    }
+
+    // Display Items
+    function displayItems() {
+      const displayArea = document.getElementById("displayArea");
+      const deleteSelect = document.getElementById("deleteSelect");
+
+      deleteSelect.innerHTML = "<option value=''>Choose an item</option>";
+
+      if (toDoList.length === 0) {                      // Check if the list is empty and display a message
+        displayArea.innerHTML = "<p class='empty-message'>The to-do list is empty.</p>";
+        return;
+      }
+
+      let output = "<ol>";                              // Start an ordered list
+
+      for (let i = 0; i < toDoList.length; i++) {       // Add each item to the output and the select dropdown
+        output += "<li>" + toDoList[i] + "</li>";
+        deleteSelect.innerHTML += "<option value='" + i + "'>" + toDoList[i] + "</option>";
+      }
+
+      output += "</ol>";
+      displayArea.innerHTML = output;           // Update the display area with the list
+    }
+
+    // Initial Display
+    displayItems();
+  </script>
+</body>
+</html>
